@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="meal-storage" content="browser">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.github.com">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="管理早餐与外卖方案，安排和记录每一周的餐食。">
+  <title>食记 · 餐食计划</title><link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./assets/styles-IZ75USPG.css"><script type="module" src="./assets/app-BGUB2NPK.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#breakfast"><span class="brand-icon">食</span><span>食记<small>MEAL NOTEBOOK</small></span></a>
+    <div class="nav-caption">我的餐食</div>
+    <nav aria-label="主要导航">
+      <button class="nav-item active" data-view="breakfast"><span data-icon="sun"></span>早餐方案<span class="nav-count" id="breakfast-count">—</span></button>
+      <button class="nav-item" data-view="takeout"><span data-icon="bag"></span>外卖方案<span class="nav-count" id="takeout-count">—</span></button>
+      <button class="nav-item" data-view="week"><span data-icon="calendar"></span>每周计划</button>
+    </nav>
+    <div class="sidebar-foot"><div class="local-label"><span data-icon="database"></span>本机数据</div><p>方案和计划保存在这台电脑</p><button class="backup-btn" id="backup-open"><span data-icon="download"></span>备份与恢复</button><div class="sidebar-rule"></div><span class="version">食记 / LOCAL EDITION</span></div>
+  </aside>
+  <div class="workspace"><header class="topbar"><div class="breadcrumb">我的餐食 <span>/</span> <strong id="current-label">早餐方案</strong></div><span class="save-state" id="save-state" role="status">正在连接…</span></header>
+    <main id="main" aria-busy="true"><div class="loading">正在读取你的餐食方案…</div></main>
+    <footer class="page-footer"><span>一餐一记，从容安排每一天。</span><span>个人餐食手帐</span></footer>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" class="toast" hidden></div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+</body></html>
